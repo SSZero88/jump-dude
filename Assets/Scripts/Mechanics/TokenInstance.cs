@@ -23,10 +23,10 @@ namespace Platformer.Mechanics
 
         internal SpriteRenderer _renderer;
 
-        //unique index which is assigned by the TokenController in a scene.
+        // unique index which is assigned by the TokenController in a scene.
         internal int tokenIndex = -1;
         internal TokenController controller;
-        //active frame in animation, updated by the controller.
+        // active frame in animation, updated by the controller.
         internal int frame = 0;
         internal bool collected = false;
 

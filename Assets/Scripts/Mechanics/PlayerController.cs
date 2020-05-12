@@ -31,6 +31,7 @@ namespace Platformer.Mechanics
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+        public int currentScore;
 
         private Color _startingColor;
 
@@ -47,6 +48,19 @@ namespace Platformer.Mechanics
         {
             get;
             private set;
+        }
+
+        public override void Bounce(float b)
+        {
+
+            if (Input.GetButton("Jump"))
+            {
+                velocity.y = jumpTakeOffSpeed * model.jumpModifier + b;
+            }
+            else
+            {
+                base.Bounce(b);
+            }
         }
 
         void Awake()
